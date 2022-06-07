@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { getRoomList } from '../../api'
+
 const router = useRouter()
 
 const open = () => {
@@ -12,10 +14,14 @@ const fetchRoomList = () => {
   console.log(data)
 }
 fetchRoomList()
+
+const value1 = ref('')
+
 </script>
 
 <template>
   首页
+  {{ $t('message.home') }}
   <el-button @click="open">
     asdf
   </el-button>
@@ -25,6 +31,7 @@ fetchRoomList()
   <div class="text">
     阿斯阿斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬阿斯蒂芬蒂芬
   </div>
+  <el-date-picker v-model="value1" type="datetime" placeholder="Select date and time" />
 </template>
 
 <style lang="scss" scoped>
