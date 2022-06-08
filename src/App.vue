@@ -2,7 +2,6 @@
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { saveLanguageApi } from './api/layout'
 import Header from '@/components/layout/header.vue'
 const router = useRouter()
 const locale = ref()
@@ -16,10 +15,6 @@ const changeLang = (lang: any) => {
 }
 
 function saveLanguage(lang: any) {
-  saveLanguageApi(lang).then(({ success }) => {
-    if (success)
-      console.log('data')
-  })
 }
 </script>
 
