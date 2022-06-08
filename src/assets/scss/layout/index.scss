@@ -1,0 +1,22 @@
+.header-common {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .logo {
+    width: 160px;
+    height: 58px;
+  }
+
+  .el-menu {
+    flex: 1;
+    padding: 0 10px;
+    justify-content: right;
+  }
+
+  .avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+  }
+}
