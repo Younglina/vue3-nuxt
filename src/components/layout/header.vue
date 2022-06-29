@@ -44,5 +44,5 @@ const handleSelect = (key: string) => {
 }
 </script>
 <style lang="scss">
-@import "@/assets/scss/layout/index.scss";
+@import "@/assets/scss/layout/header.scss";
 </style>

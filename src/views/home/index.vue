@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { getRoomList } from '../../api'
-import IndexedDB from '../../utils/indexedDB'
 const router = useRouter()
 
 const open = () => {
@@ -17,8 +16,6 @@ fetchRoomList()
 
 const value1 = ref('')
 
-const vue3DB = new IndexedDB('vue3DB')
-vue3DB.openStore('room', 'id', ['num', 'size'])
 </script>
 
 <template>

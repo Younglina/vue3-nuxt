@@ -1,6 +1,7 @@
+import { createRouter, createWebHashHistory } from 'vue-router'
 import home from '@/views/home/index.vue'
 import mine from '@/views/mine/index.vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import login from '@/views/login/index.vue'
 
 const routes = [
   {
@@ -8,22 +9,30 @@ const routes = [
     name: 'home',
     component: home,
     meta: {
-      keepAlive: true
-    }
+      keepAlive: true,
+    },
   },
   {
     path: '/mine',
     name: 'mine',
     component: mine,
     meta: {
-      keepAlive: true
-    }
-  }
+      keepAlive: true,
+    },
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login,
+    meta: {
+      keepAlive: true,
+    },
+  },
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 })
 
 export default router

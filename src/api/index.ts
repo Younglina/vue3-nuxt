@@ -6,3 +6,7 @@ export function getRoomList() {
     pageSize: 3,
   })
 }
+
+export function loginWithPhone(data: { phone: string; password: string }) {
+  return http.post('/login/cellphone', data)
+}
